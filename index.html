@@ -10,7 +10,6 @@
     <div class="container">
         <div class="header">
             <h1>Proje İlerleme Panosu</h1>
-            <p id="info-text">Veriler yükleniyor...</p>
         </div>
 
         <div class="stats-grid">
@@ -29,11 +28,26 @@
         </div>
 
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Kuyu adı veya mahalle ara...">
+            <input type="text" id="search-input" placeholder="Kuyu no ara...">
         </div>
 
-        <div id="well-list">
-            </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tarih</th>
+                        <th>Kuyu No</th>
+                        <th>Proje Metrajı</th>
+                        <th>Foraj</th>
+                        <th>Alınan Foraj</th>
+                        <th>Durum</th>
+                    </tr>
+                </thead>
+                <tbody id="well-table-body">
+                    </tbody>
+            </table>
+        </div>
+
     </div>
 
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
