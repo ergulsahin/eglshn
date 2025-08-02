@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Kuyu İlerleme Panosu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Proje İlerleme Panosu</h1>
+            <p id="info-text">Veriler yükleniyor...</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Toplam Kuyu</h3>
+                <p id="total-wells">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Tamamlanan</h3>
+                <p id="completed-wells">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Devam Eden</h3>
+                <p id="ongoing-wells">0</p>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Kuyu adı veya mahalle ara...">
+        </div>
+
+        <div id="well-list">
+            </div>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

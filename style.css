@@ -1,0 +1,115 @@
+/* Telegram'ın tema renklerine uyum sağlar, yoksa varsayılan renkleri kullanır */
+:root {
+    --tg-bg-color: var(--tg-theme-bg-color, #ffffff);
+    --tg-text-color: var(--tg-theme-text-color, #222222);
+    --tg-hint-color: var(--tg-theme-hint-color, #999999);
+    --tg-button-color: var(--tg-theme-button-color, #007bff);
+    --tg-button-text-color: var(--tg-theme-button-text-color, #ffffff);
+    --tg-secondary-bg-color: var(--tg-theme-secondary-bg-color, #f1f1f1);
+    --status-completed: #28a745; /* Yeşil */
+    --status-ongoing: #ffc107;  /* Sarı */
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--tg-bg-color);
+    color: var(--tg-text-color);
+    overscroll-behavior: none; /* Sayfanın arkasındaki içeriğin kaymasını engeller */
+}
+
+.container {
+    padding: 15px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+#info-text {
+    font-size: 14px;
+    color: var(--tg-hint-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: var(--tg-secondary-bg-color);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--tg-hint-color);
+    background-color: var(--tg-secondary-bg-color);
+    color: var(--tg-text-color);
+    font-size: 16px;
+    box-sizing: border-box; /* Padding'in genişliği etkilememesini sağlar */
+}
+
+#search-input::placeholder {
+    color: var(--tg-hint-color);
+}
+
+.well-card {
+    background-color: var(--tg-secondary-bg-color);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid; /* Durum rengi için sol kenarlık */
+}
+
+.well-card.completed {
+    border-left-color: var(--status-completed);
+}
+
+.well-card.ongoing {
+    border-left-color: var(--status-ongoing);
+}
+
+.well-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 17px;
+}
+
+.well-info p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: var(--tg-hint-color);
+}
+
+.well-info strong {
+    color: var(--tg-text-color);
+    font-weight: 500;
+}
