@@ -33,11 +33,18 @@ body {
     margin-bottom: 5px;
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+/* YENİ SÜTUN YAPISI İÇİN STİLLER */
+.stats-container {
+    display: flex;
+    gap: 15px; /* Sütunlar arası boşluk */
     margin-bottom: 20px;
+}
+
+.stats-column {
+    flex: 1; /* Her sütun eşit yer kaplasın */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Kartlar arası dikey boşluk */
 }
 
 .stat-card {
@@ -48,12 +55,13 @@ body {
     color: #ffffff;
 }
 
-/* KARTLARA RENK ATAMASI */
-.stat-card:nth-child(1) { background: linear-gradient(45deg, #007bff, #0056b3); } /* Toplam Kuyu */
-.stat-card:nth-child(2) { background: linear-gradient(45deg, #28a745, #1e7e34); } /* Tamamlanan */
-.stat-card:nth-child(3) { background: linear-gradient(45deg, #dc3545, #b02a37); } /* Kalan */
-.stat-card:nth-child(4) { background: linear-gradient(45deg, #17a2b8, #117a8b); } /* Yapılan Metraj */
-.stat-card:nth-child(5) { background: linear-gradient(45deg, #ffc107, #d39e00); } /* Kalan Metraj */
+/* KARTLARA RENK ATAMASI (SINIFLARA GÖRE) */
+.card-total-wells { background: linear-gradient(45deg, #007bff, #0056b3); }
+.card-completed-wells { background: linear-gradient(45deg, #28a745, #1e7e34); }
+.card-remaining-wells { background: linear-gradient(45deg, #dc3545, #b02a37); }
+.card-total-meterage { background: linear-gradient(45deg, #6f42c1, #563d7c); } /* Yeni Kart Rengi */
+.card-drilled-meterage { background: linear-gradient(45deg, #17a2b8, #117a8b); }
+.card-remaining-meterage { background: linear-gradient(45deg, #ffc107, #d39e00); }
 
 
 .stat-card h3 {
