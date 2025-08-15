@@ -1,0 +1,7 @@
+python-telegram-bot
+flask
+pandas
+fpdf2
+gunicorn
+Flask-SQLAlchemy
+psycopg2-binary
